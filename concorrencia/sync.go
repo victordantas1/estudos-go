@@ -1,5 +1,5 @@
 package main
-
+/*
 import (
 	"fmt"
 	"math/rand"
@@ -10,8 +10,8 @@ import (
 func main() {
 	inicio := time.Now()
 	rand.Seed(inicio.UnixNano())
-	var controle sync.WaitGroup
-	for i := 0; i < 5; i++{
+	var controle sync.WaitGroup // Cria uma variavel do tipo WaitGroup para controlar as goroutines
+	for i := 0; i < 5; i++ {
 		controle.Add(1)
 		go executar(&controle)
 	}
@@ -26,3 +26,4 @@ func executar(controle *sync.WaitGroup) {
 	time.Sleep(duracao)
 }
 
+*/

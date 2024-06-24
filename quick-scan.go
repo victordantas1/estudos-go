@@ -1,8 +1,9 @@
 package main
-
+/*
 import (
 	"fmt"
 )
+
 
 func merge_array(array1, array2 []int) []int {
 	new_array := append(array1, array2...)
@@ -21,6 +22,7 @@ func particionar(numeros []int, pivo int) (menores, maiores []int) {
 }
 
 func quicksort(numeros []int) []int {
+	
 
 	if len(numeros) <= 1 {
 		return numeros
@@ -35,7 +37,10 @@ func quicksort(numeros []int) []int {
 	n = append(n[:indice_pivo], n[indice_pivo + 1:]...)
 	menores, maiores := particionar(n, pivo)
 
-	return append(append(quicksort(menores), pivo), quicksort(maiores)...)
+	go quicksort(menores)
+	go quicksort(maiores)
+
+	return append(append(maiores, pivo), menores...)
 }
 
 func main() {
@@ -46,5 +51,8 @@ func main() {
 	for i := 0; i < tam; i++ {
 		fmt.Scanf("%d", &vet[i])
 	}
-	fmt.Println(quicksort(vet))
+	array_ordenado := quicksort(vet)
+
+	fmt.Println(array_ordenado)
 }
+*/

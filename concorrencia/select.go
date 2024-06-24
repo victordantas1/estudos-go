@@ -1,5 +1,5 @@
 package main
-/*
+
 import "fmt"
 
 func main() {
@@ -23,7 +23,8 @@ func main() {
 	}
 
 	fmt.Printf("Impares: %v | Pares: %v\n", impares, pares)
-}*/
+}
+
 func separar(nums []int, i, p chan <- int, pronto chan <- bool) {
 	for _, n := range nums {
 		if n % 2 == 0 {
